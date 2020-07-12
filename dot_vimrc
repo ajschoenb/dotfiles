@@ -1,0 +1,76 @@
+" Misc {{{
+set number "Show Line Numbers
+set showmatch "Show matching brackets
+set cursorline "Underline current line
+set background=dark "Use a dark background so that colors display properly
+set showcmd "Show last entered command in bottom bar
+set modeline "Tell vim we have one modeline at the end of the file
+set encoding=utf-8 "Use utf8 encoding for display
+set fileencoding=utf-8 "Use utf8 when saving files
+nnoremap <C-C> :set syntax=cpp<CR>
+nnoremap <C-H> :nohl<CR>
+" }}}
+" Tabs and Spaces {{{
+set expandtab "Use spaces instead of tabs
+set softtabstop=2 "Set tab size when editing
+set shiftwidth=2
+set autoindent "Auto-indent new lines
+" }}}
+" Searching {{{
+set ignorecase "Ignore case when searching
+set smartcase "Override ignorecase if pattern includes capital letters
+set hlsearch "Highlight pattern matches when searching
+set incsearch "Highlight matches as search pattern is typed
+" }}}
+" Folds {{{
+set foldenable "Enable folding
+set foldlevelstart=0 "Set how large a fold needs to be to close it
+set foldlevel=0
+set foldnestmax=10 "Cap nested folds at 10 layers
+"set foldmethod=indent "Fold based on indentation
+set foldmethod=syntax
+" }}}
+" Powerline {{{
+set rtp+=~/.local/lib/python3.6/site-packages/powerline/bindings/vim
+set laststatus=2
+set t_Co=256
+" }}}
+" Plugins {{{
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'rust-lang/rust.vim'
+Plugin 'vim-syntastic/syntastic'
+call vundle#end()
+filetype plugin indent on
+" }}}
+" Syntastic {{{
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatusFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_auto_loc_list=1
+let g:syntastic_check_on_open=1
+let g:syntastic_check_on_wq=0
+
+let g:syntastic_asm_checkers=['gcc']
+let g:syntastic_c_checkers=['clang_tidy', 'cppcheck']
+let g:syntastic_cmake_checkers=['cmakelint']
+let g:syntastic_cpp_checkers=['clang_tidy', 'cppcheck']
+let g:syntastic_go_checkers=['golangci_lint']
+let g:syntastic_java_checkers=['javac']
+let g:syntastic_javascript_checkers=['standard']
+let g:syntastic_markdown_checkers=['proselint']
+let g:syntastic_python_checkers=['pylint']
+let g:syntastic_rust_checkers=['cargo']
+let g:syntastic_sh_checkers=['shellcheck', 'shfmt']
+let g:syntastic_tex_checkers=['proselint']
+let g:syntastic_text_checkers=['proselint']
+let g:syntastic_verilog_checkers=['iverilog']
+let g:syntastic_vim_checkers=['vint']
+let g:syntastic_yaml_checkers=['yamllint']
+" }}}
+" Modeline {{{
+" vim: foldmethod=marker:foldlevel=0
+" }}}
