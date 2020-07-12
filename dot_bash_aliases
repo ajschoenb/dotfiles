@@ -1,0 +1,21 @@
+# List of custom aliases to be included in ~/.bashrc
+# Git Aliases {{{
+alias gps="git push"
+alias gpl="git pull"
+alias gcm="git commit"
+alias gcl="git clone"
+alias gst="git status"
+alias gad="git add"
+alias glg="git log --graph --pretty=format:'%C(bold red)%h%Creset -%C(bold yellow)%d%Creset %s %C(bold green)(%cd) %C(bold cyan)<%an>%Creset' --abbrev-commit --date=human"
+alias gdf="git diff"
+alias gch="git checkout"
+# }}}
+# Misc Aliases {{{
+alias dev="tmuxp load dev -y"
+alias gdc="gdb"
+alias cdq="/lusr/opt/condor/bin/condor_q"
+alias crm="/lusr/opt/condor/bin/condor_rm"
+alias r="fc -s"
+alias dld=". dld"
+# }}}
+# vim:foldmethod=marker:foldlevel=0
