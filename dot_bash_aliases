@@ -17,5 +17,6 @@ alias cdq="/lusr/opt/condor/bin/condor_q"
 alias crm="/lusr/opt/condor/bin/condor_rm"
 alias r="fc -s"
 alias dld=". dld"
+alias qdb="gdb kernel/kernel -ex 'target remote localhost:1234'"
 # }}}
 # vim:foldmethod=marker:foldlevel=0
