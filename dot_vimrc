@@ -12,8 +12,8 @@ nnoremap <C-H> :nohl<CR>
 " }}}
 " Tabs and Spaces {{{
 set expandtab "Use spaces instead of tabs
-set softtabstop=2 "Set tab size when editing
-set shiftwidth=2
+set softtabstop=4 "Set tab size when editing
+set shiftwidth=4
 set autoindent "Auto-indent new lines
 " }}}
 " Searching {{{
@@ -55,9 +55,11 @@ let g:syntastic_check_on_open=1
 let g:syntastic_check_on_wq=0
 
 let g:syntastic_asm_checkers=['gcc']
-let g:syntastic_c_checkers=['clang_tidy', 'cppcheck', 'gcc']
+let g:syntastic_c_checkers=['gcc']
+let g:syntastic_c_args="--std=c99"
 let g:syntastic_cmake_checkers=['cmakelint']
-let g:syntastic_cpp_checkers=['clang_tidy', 'cppcheck', 'gcc']
+let g:syntastic_cpp_checkers=['gcc']
+let g:syntastic_cpp_args="--std=c++17"
 let g:syntastic_go_checkers=['golangci_lint']
 let g:syntastic_java_checkers=['javac']
 let g:syntastic_javascript_checkers=['standard']
