@@ -9,6 +9,7 @@ alias gad="git add"
 alias glg="git log --graph --pretty=format:'%C(bold red)%h%Creset -%C(bold yellow)%d%Creset %s %C(bold green)(%cd) %C(bold cyan)<%an>%Creset' --abbrev-commit --date=human"
 alias gdf="git diff"
 alias gch="git checkout"
+alias gmg="git merge"
 # }}}
 # Misc Aliases {{{
 alias dev="tmuxp load dev -y"
