@@ -10,6 +10,8 @@ alias glg="git log --graph --pretty=format:'%C(bold red)%h%Creset -%C(bold yello
 alias gdf="git diff"
 alias gch="git checkout"
 alias gmg="git merge"
+alias grb="git rebase"
+alias gbr="git branch"
 # }}}
 # Misc Aliases {{{
 alias dev="tmuxp load dev -y"
