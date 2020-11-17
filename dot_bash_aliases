@@ -12,6 +12,7 @@ alias gch="git checkout"
 alias gmg="git merge"
 alias grb="git rebase"
 alias gbr="git branch"
+alias gsh="git stash"
 # }}}
 # Misc Aliases {{{
 alias dev="tmuxp load dev -y"
