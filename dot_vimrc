@@ -41,8 +41,11 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'preservim/nerdtree'
 call vundle#end()
 filetype plugin indent on
+nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFocus<CR>
 " }}}
 " Syntastic {{{
 set statusline+=%#warningmsg#
@@ -70,7 +73,7 @@ let g:syntastic_sh_checkers=['shellcheck', 'shfmt']
 let g:syntastic_tex_checkers=['proselint']
 let g:syntastic_text_checkers=['proselint']
 let g:syntastic_verilog_checkers=['iverilog']
-let g:syntastic_vim_checkers=['vint']
+" let g:syntastic_vim_checkers=['vint']
 let g:syntastic_yaml_checkers=['yamllint']
 " }}}
 " Modeline {{{
