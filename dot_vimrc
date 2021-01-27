@@ -9,6 +9,7 @@ set encoding=utf-8 "Use utf8 encoding for display
 set fileencoding=utf-8 "Use utf8 when saving files
 nnoremap <C-C> :set syntax=cpp<CR>
 nnoremap <C-H> :nohl<CR>
+nnoremap <C-T> :vert rightb term<CR>
 " }}}
 " Tabs and Spaces {{{
 set expandtab "Use spaces instead of tabs
