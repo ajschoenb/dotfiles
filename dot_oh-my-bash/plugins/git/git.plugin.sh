@@ -169,8 +169,10 @@ alias gk='\gitk --all --branches'
 alias gke='\gitk --all $(git log -g --pretty=%h)'
 #compdef _git gke='gitk'
 
-alias gl='git pull'
-alias glg='git log --stat'
+alias gpl='git pull'
+
+alias glg="git log --graph --pretty=format:'%C(bold red)%h%Creset -%C(bold yellow)%d%Creset %s %C(bold green)(%cd) %C(bold cyan)<%an>%Creset' --abbrev-commit --date=human"
+# alias glg='git log --stat'
 alias glgp='git log --stat -p'
 alias glgg='git log --graph'
 alias glgga='git log --graph --decorate --all'
