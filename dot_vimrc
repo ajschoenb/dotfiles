@@ -43,8 +43,11 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'preservim/nerdtree'
+Plugin 'morhetz/gruvbox'
 call vundle#end()
 filetype plugin indent on
+let g:gruvbox_contrast_dark='hard'
+autocmd vimenter * nested colorscheme gruvbox
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFocus<CR>
 " }}}
