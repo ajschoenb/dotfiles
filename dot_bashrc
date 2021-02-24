@@ -72,6 +72,8 @@ plugins=(
 
 source $OSH/oh-my-bash.sh
 
+set +C
+
 # User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
 
