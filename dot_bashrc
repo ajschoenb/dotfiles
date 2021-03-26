@@ -74,6 +74,9 @@ source $OSH/oh-my-bash.sh
 
 set +C
 
+export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
+export LIBGL_ALWAYS_INDIRECT=1
+
 # User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
 
